@@ -1,0 +1,274 @@
+/* Zigzag Studios — zigzags.app */
+
+:root {
+  --snow: #F6F5F1;
+  --ink: #15191D;
+  --gold: #D99A2B;
+  --gold-deep: #B37B14;
+  --mist: #6E8290;
+  --night: #12161A;
+  --night-soft: #1B2127;
+  --line: #E3E0D6;
+  --maxw: 60rem;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background: var(--snow);
+  color: var(--ink);
+  font-family: "Instrument Sans", system-ui, -apple-system, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+a { color: inherit; }
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--gold-deep);
+  outline-offset: 3px;
+  border-radius: 2px;
+}
+
+.wrap {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* ---------- header ---------- */
+
+header.site {
+  padding: 1.4rem 0 1.1rem;
+  border-bottom: 1px solid var(--line);
+}
+
+.site-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.brand {
+  font-family: "Bricolage Grotesque", "Instrument Sans", sans-serif;
+  font-weight: 800;
+  font-size: 1.05rem;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand .zz span {
+  display: inline-block;
+  transform: translateY(var(--y, 0));
+}
+.brand .zz span:nth-child(odd)  { --y: -0.14em; }
+.brand .zz span:nth-child(even) { --y:  0.14em; }
+.brand .studios {
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  color: var(--mist);
+  margin-left: 0.45em;
+}
+
+nav.site-nav {
+  display: flex;
+  gap: 1.4rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+}
+nav.site-nav a {
+  text-decoration: none;
+  color: var(--mist);
+}
+nav.site-nav a:hover { color: var(--ink); }
+
+/* ---------- hero ---------- */
+
+.hero { padding: 5rem 0 0; }
+
+.eyebrow {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin: 0 0 1.4rem;
+}
+
+h1.statement {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.4rem, 6.2vw, 4.4rem);
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  margin: 0 0 1.4rem;
+  max-width: 21ch;
+}
+h1.statement .gold { color: var(--gold-deep); }
+
+.hero p.lede {
+  max-width: 34rem;
+  margin: 0 0 4rem;
+  color: #3D454C;
+}
+
+/* the ridgeline — Mt. Hood as a hi-lo line */
+.ridge { display: block; width: 100%; height: auto; }
+
+/* ---------- apps ---------- */
+
+section.apps { padding: 4.5rem 0 1rem; }
+
+h2.sec {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--mist);
+  margin: 0 0 1.6rem;
+}
+
+.app-card {
+  background: var(--night);
+  color: #EDEAE2;
+  border-radius: 14px;
+  padding: 2.4rem 2.2rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.8rem;
+  align-items: center;
+}
+
+.app-glyph {
+  width: 74px;
+  height: 74px;
+  border-radius: 17px;
+  background: var(--night-soft);
+  display: grid;
+  place-items: center;
+  flex: none;
+}
+
+.app-card h3 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1.45rem;
+  margin: 0 0 0.3rem;
+  letter-spacing: 0.01em;
+}
+
+.app-card p {
+  margin: 0 0 0.9rem;
+  color: #B9BDB9;
+  max-width: 38rem;
+}
+
+.badge {
+  display: inline-block;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border: 1px solid rgba(217, 154, 43, 0.45);
+  border-radius: 999px;
+  padding: 0.28rem 0.75rem;
+}
+
+/* ---------- support ---------- */
+
+section.support { padding: 4rem 0 5rem; }
+
+.support-box {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 2rem 2.2rem;
+}
+.support-box p { margin: 0.2rem 0; max-width: 40rem; }
+
+.mail {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 1rem;
+  color: var(--gold-deep);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+  word-break: break-all;
+}
+
+/* ---------- documents (privacy / terms) ---------- */
+
+main.doc { padding: 3.5rem 0 5rem; }
+
+main.doc h1 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.9rem, 4.5vw, 2.7rem);
+  margin: 0 0 0.4rem;
+}
+
+.doc-date {
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  color: var(--mist);
+  margin: 0 0 2.6rem;
+}
+
+main.doc h2 {
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin: 2.4rem 0 0.6rem;
+}
+
+main.doc p, main.doc li { max-width: 42rem; color: #2C3339; }
+main.doc ul { padding-left: 1.2rem; }
+
+/* ---------- footer ---------- */
+
+footer.site {
+  border-top: 1px solid var(--line);
+  padding: 2rem 0 2.6rem;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.76rem;
+  letter-spacing: 0.05em;
+  color: var(--mist);
+}
+.foot-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+footer.site a { color: var(--mist); }
+footer.site a:hover { color: var(--ink); }
+
+/* ---------- motion ---------- */
+
+@media (prefers-reduced-motion: no-preference) {
+  .brand .zz span {
+    animation: settle 0.7s cubic-bezier(0.2, 0.8, 0.3, 1.1) backwards;
+    animation-delay: calc(var(--i) * 60ms);
+  }
+  @keyframes settle {
+    from { transform: translateY(0); opacity: 0; }
+    to   { transform: translateY(var(--y)); opacity: 1; }
+  }
+}
+
+/* ---------- small screens ---------- */
+
+@media (max-width: 620px) {
+  .hero { padding-top: 3.2rem; }
+  .app-card { grid-template-columns: 1fr; padding: 1.8rem 1.5rem; }
+  .support-box { padding: 1.5rem 1.25rem; }
+}
