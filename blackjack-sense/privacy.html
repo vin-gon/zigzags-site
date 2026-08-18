@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack Sense — Privacy Policy</title>
+    <style>
+        :root {
+            --bg: #ffffff;
+            --fg: #1c1c1e;
+            --muted: #6b6b70;
+            --border: #e5e5ea;
+            --link: #0a63e5;
+            --max-width: 720px;
+        }
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #111113;
+                --fg: #e8e8ea;
+                --muted: #98989d;
+                --border: #2c2c2e;
+                --link: #4a97ff;
+            }
+        }
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 32px 20px 96px;
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            font-size: 16px;
+            line-height: 1.55;
+            color: var(--fg);
+            background: var(--bg);
+        }
+        main {
+            max-width: var(--max-width);
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 32px;
+            font-weight: 700;
+            margin: 0 0 4px;
+            letter-spacing: -0.02em;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 40px 0 12px;
+            letter-spacing: -0.01em;
+        }
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 20px 0 8px;
+        }
+        p, li { margin: 0 0 12px; }
+        ul { padding-left: 22px; margin: 0 0 12px; }
+        a { color: var(--link); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        .lead {
+            color: var(--muted);
+            font-size: 15px;
+            margin: 0 0 32px;
+        }
+        .updated {
+            color: var(--muted);
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin: 0 0 24px;
+        }
+        footer {
+            margin-top: 64px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            font-size: 13px;
+            color: var(--muted);
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <p class="updated">Last updated: August 17, 2026</p>
+        <h1>Privacy Policy</h1>
+        <p class="lead">This policy explains how the Blackjack Sense mobile app, operated by Zigzag Studios LLC ("we", "us"), collects, uses, and protects your information.</p>
+
+        <h2>1. Information We Collect</h2>
+
+        <h3>Account and identity</h3>
+        <p>When you first launch the app, we create an anonymous user account via Firebase Authentication and assign a random user ID. If you choose to link the account using Sign in with Apple, Apple may share your name and, if you allow it, your email address. Apple's "Hide My Email" feature is fully supported — we never see your real email unless you disclose it.</p>
+
+        <h3>Profile information</h3>
+        <p>You choose an in-app username and emoji avatar. The username is auto-generated on first launch (e.g., <em>Player4321</em>) and can be changed subject to a cooldown period.</p>
+
+        <h3>Progress and usage data</h3>
+        <p>To sync your account across devices and support features like the leaderboard, we store the following in Google Firestore, keyed to your user ID:</p>
+        <ul>
+            <li>Lesson and drill completion history</li>
+            <li>Simulated in-app currency balances (chips and debt)</li>
+            <li>Timestamps for last play, last rename, and account creation</li>
+            <li>Subscription entitlement mirror</li>
+        </ul>
+
+        <h3>Analytics events</h3>
+        <p>We use Firebase Analytics to log product usage events, including which lessons and drills you start and complete, when you view the paywall, whether you subscribe or cancel, and other funnel-level interactions. These events are attached to your Firebase user ID (not your name or email) so we can improve the product.</p>
+
+        <h3>Crash and diagnostic data</h3>
+        <p>Firebase Crashlytics automatically captures crash stack traces, device model, OS version, app version, available memory, and a rolling log of recent in-app events. This data is used to diagnose and fix crashes.</p>
+
+        <h3>Integrity data</h3>
+        <p>Firebase App Check uses Apple's App Attest to verify that requests to our backend originate from a genuine, unmodified installation of the app. This prevents modded clients from writing to your leaderboard or bankroll.</p>
+
+        <h3>Subscription status</h3>
+        <p>Subscription entitlements are verified via Apple's StoreKit APIs. We never see or store your payment method — Apple handles all payment processing.</p>
+
+        <h2>2. How We Use Information</h2>
+        <ul>
+            <li>Providing and maintaining the app</li>
+            <li>Syncing your progress and preferences across devices</li>
+            <li>Verifying purchases and subscription state</li>
+            <li>Detecting fraud, abuse, and modded clients</li>
+            <li>Responding to your support and account requests</li>
+            <li>Understanding aggregate usage patterns to improve the product</li>
+        </ul>
+
+        <h2>3. Third-Party Services</h2>
+        <p>The app relies on the following services. Each processes your data under its own privacy policy:</p>
+        <ul>
+            <li><strong>Apple</strong> — Sign in with Apple, StoreKit subscriptions, App Store distribution. <a href="https://www.apple.com/legal/privacy/">Apple's privacy policy</a>.</li>
+            <li><strong>Google Firebase</strong> — Authentication, Firestore data storage, Analytics, Crashlytics, App Check. <a href="https://firebase.google.com/support/privacy">Firebase's privacy policy</a>.</li>
+        </ul>
+        <p>Our service providers may use aggregated, de-identified data for their own purposes under their respective terms.</p>
+
+        <h2>4. Advertising and Data Sales</h2>
+        <p>Blackjack Sense does not currently show third-party advertisements and does not sell your personal data to any party.</p>
+        <p>We do not track you across other companies' apps or websites, do not use the advertising identifier (IDFA), and do not request App Tracking Transparency permission.</p>
+        <p>Our analytics provider includes an on-device ads-conversion measurement component from Google. We do not currently run Google ad campaigns, and this component transmits no advertising identifiers unless such campaigns are configured.</p>
+
+        <h2>5. Data Retention</h2>
+        <p>Active account data is retained as long as your account exists. When you delete your account, associated data is removed from our systems within 30 days, except where longer retention is required by law, fraud prevention, or dispute resolution. Anonymous accounts that have not launched the app in 30 days may be automatically pruned.</p>
+
+        <h2>6. Your Rights and Choices</h2>
+        <p><strong>Delete your account.</strong> You can delete your account and all associated data directly in the app: Settings → Delete Account. You may also email <a href="mailto:contact@zigzags.app">contact@zigzags.app</a> to request deletion; we respond within 30 days.</p>
+        <p><strong>Manage your subscription.</strong> Subscriptions are managed through your device's App Store settings (Settings → Apple ID → Subscriptions). You can restore previously purchased subscriptions using the "Restore" link in the app's subscription screen.</p>
+        <p><strong>Additional rights.</strong> If you are located in the European Economic Area, the United Kingdom, or California, you have the right to access, correct, delete, port, and object to or restrict certain processing of your personal data. To exercise these rights, email <a href="mailto:contact@zigzags.app">contact@zigzags.app</a>. We respond within 30 days.</p>
+
+        <h2>7. Children</h2>
+        <p>Blackjack Sense is rated 18+ due to simulated gambling and is not designed for or directed at children. We do not knowingly collect personal information from anyone under the age of 18. If you believe a minor has provided us with personal information, please contact us and we will delete it.</p>
+
+        <h2>8. International Users</h2>
+        <p>The app is operated from the United States. Firebase and other service providers may process your data in the United States and other regions. By using the app, you consent to the transfer of your information to jurisdictions that may have data protection laws different from your own.</p>
+
+        <h2>9. Security</h2>
+        <p>Data is encrypted in transit using HTTPS and at rest by Google Firebase's built-in encryption. Firebase App Check protects our backend against tampered clients. Despite these measures, no method of transmission or storage is 100% secure, and we cannot guarantee absolute security.</p>
+
+        <h2>10. Changes to This Policy</h2>
+        <p>We may update this policy from time to time. When we do, we will revise the "Last updated" date at the top of this page. Material changes will be surfaced in the app or via email when appropriate. Your continued use of the app after an update constitutes acceptance of the revised policy.</p>
+
+        <h2>11. Contact</h2>
+        <p>Zigzag Studios LLC · Portland, Oregon, USA<br>
+        Questions or concerns? Email <a href="mailto:contact@zigzags.app">contact@zigzags.app</a>.</p>
+
+        <footer>
+            <p>© 2026 Zigzag Studios LLC. Blackjack Sense is not affiliated with any casino or gambling operator. In-app chips have no monetary value and cannot be exchanged for real money.</p>
+            <p><a href="terms.html">Terms of Service</a></p>
+        </footer>
+    </main>
+</body>
+</html>
