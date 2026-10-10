@@ -186,22 +186,8 @@ h2.sec {
 
 .app-card p.app-cta { margin: 0.2rem 0 1rem; }
 
-.store-btn {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  font-family: "Instrument Sans", system-ui, sans-serif;
-  font-weight: 600;
-  font-size: 0.95rem;
-  text-decoration: none;
-  color: var(--night);
-  background: var(--gold);
-  border-radius: 999px;
-  padding: 0.6rem 1.15rem;
-  transition: background-color 0.15s ease;
-}
-.store-btn:hover { background: #E6AC45; }
-.store-btn svg { flex: none; margin-top: -2px; }
+.store-badge { display: inline-block; line-height: 0; }
+.store-badge img { display: block; height: 48px; width: auto; }
 
 /* ---------- support ---------- */
 
